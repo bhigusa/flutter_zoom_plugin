@@ -135,7 +135,7 @@ public class ZoomView  implements PlatformView,
         opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
         opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
         opts.no_audio = parseBoolean(options, "noAudio", false);
-
+        opts.no_video = parseBoolean(options, "noVideo", false);
         JoinMeetingParams params = new JoinMeetingParams();
 
         params.displayName = options.get("userId");
@@ -168,7 +168,7 @@ public class ZoomView  implements PlatformView,
         opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
         opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
         opts.no_audio = parseBoolean(options, "noAudio", false);
-
+        opts.no_video = parseBoolean(options, "noVideo", false);
         StartMeetingParamsWithoutLogin params = new StartMeetingParamsWithoutLogin();
 
 		params.userId = options.get("userId");
