@@ -17,6 +17,7 @@ import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
 import us.zoom.sdk.StartMeetingParamsWithoutLogin;
 import us.zoom.sdk.StartMeetingOptions;
+import us.zoom.sdk.MeetingViewsOptions;
 import us.zoom.sdk.MeetingService;
 import us.zoom.sdk.MeetingStatus;
 import us.zoom.sdk.ZoomError;
@@ -136,7 +137,9 @@ public class ZoomView  implements PlatformView,
         opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
         opts.no_audio = parseBoolean(options, "noAudio", false);
         opts.no_video = parseBoolean(options, "noVideo", false);
-        opts.no_titlebar = true;
+        meeting_views_options = MeetingViewsOptions.NO_TEXT_PASSWORD
+                +MeetingViewsOptions.NO_TEXT_MEETING_ID;
+//        opts.no_titlebar = true;
         JoinMeetingParams params = new JoinMeetingParams();
 
         params.displayName = options.get("userId");
