@@ -137,9 +137,7 @@ public class ZoomView  implements PlatformView,
         opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
         opts.no_audio = parseBoolean(options, "noAudio", false);
         opts.no_video = parseBoolean(options, "noVideo", false);
-        meeting_views_options = MeetingViewsOptions.NO_TEXT_PASSWORD
-                +MeetingViewsOptions.NO_TEXT_MEETING_ID;
-//        opts.no_titlebar = true;
+        opts.no_titlebar = true;
         JoinMeetingParams params = new JoinMeetingParams();
 
         params.displayName = options.get("userId");
